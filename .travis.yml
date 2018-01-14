@@ -32,3 +32,7 @@ before_install:
   - git clone https://github.com/urho3d/android-ndk.git $HOME/android-ndk-root
   - export ANDROID_NDK_HOME=$HOME/android-ndk-root
   - echo "ndk.dir=$ANDROID_NDK_HOME" > local.properties
+
+  # Submodules
+  - git submodule init
+  - git submodule update
