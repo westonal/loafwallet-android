@@ -33,6 +33,10 @@ before_install:
   - export ANDROID_NDK_HOME=$HOME/android-ndk-root
   - echo "ndk.dir=$ANDROID_NDK_HOME" > local.properties
 
-  # Submodules
-  - git submodule init
-  - git submodule update
+  # Submodules (Travis does this by default)
+  # - git submodule init
+  # - git submodule update
+
+script:
+  #default travis is ./gradlew build connectedCheck
+  - ./gradlew assembleLoafDebug
